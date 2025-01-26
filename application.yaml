@@ -5,13 +5,12 @@ metadata:
   namespace: argocd
 spec:
   destination:
-    name: ''
     namespace: myapp
     server: https://kubernetes.default.svc
   source:
-    repoURL: https://github.com/username/repo-name.git
+    repoURL: https://github.com/Obiana-Ifeanyi/argo-gitops.git
     targetRevision: HEAD
-    path: path/to/manifest/
+    path: path/to/manifest/ # change this
   project: default
   syncPolicy:
     syncOptions:
