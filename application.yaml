@@ -1,16 +1,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: myapp-argo-application
+  name: nginx-app
   namespace: argocd
 spec:
   destination:
-    namespace: myapp
+    namespace: nginx
     server: https://kubernetes.default.svc
   source:
     repoURL: https://github.com/Obiana-Ifeanyi/argo-gitops.git
-    targetRevision: HEAD
-    path: path/to/manifest/ # change this
+    targetRevision: HEAD # main  # Or the branch you want to track
+    path: nginx  # Path to your Kubernetes manifests in the repo
   project: default
   syncPolicy:
     syncOptions:
