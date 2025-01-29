@@ -1,0 +1,15 @@
+prometheus:
+  service:
+    type: LoadBalancer
+    port: 9090
+    targetPort: 9090
+alertmanager:
+  service:
+    type: LoadBalancer
+    port: 9093
+    targetPort: 9093
+grafana:
+  service:
+    type: LoadBalancer
+    port: 80
+    targetPort: 3000
